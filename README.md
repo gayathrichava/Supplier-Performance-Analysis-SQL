@@ -177,7 +177,7 @@ Supplier-Performance-Analysis-SQL/
 │   └── Original quarterly source datasets
 │
 ├── Clean Data/
-│   └── Cleaned quarterly CSV datasets
+│   └── Cleaned quarterly source datasets
 │
 ├── supplier_performance_analysis.sql
 │   └── Complete PostgreSQL analysis
