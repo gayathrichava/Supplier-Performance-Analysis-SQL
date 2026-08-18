@@ -111,17 +111,18 @@ This made supplier-level grouping more consistent and helped identify cases wher
 
 ---
 
+
 ## 💡 Key Findings
 
-The analysis showed that:
+- **Overall performance:** 15,973 of 18,639 KPI records received a Good rating, resulting in an overall Good rate of **85.7%**.
 
-- The dataset contains **18,639 KPI records** across four quarters.
-- Supplier performance varies considerably, with some suppliers showing consistently strong KPI results while others have higher proportions of non-Good ratings.
-- Performance patterns were examined across suppliers, KPIs, business areas, departments, and quarters.
-- Supplier-name inconsistencies were identified as an important data-quality issue that can affect supplier-level analysis.
-- Standardising supplier-name formatting produced more consistent groupings for supplier performance analysis.
+- **Stable quarterly performance:** The Good-rating rate remained relatively consistent throughout the four quarters, ranging from **85.3% to 86.3%**. Q3 recorded the highest Good rate at **86.3%**, while Q1 recorded the lowest at **85.3%**.
 
----
+- **Problem suppliers:** Among suppliers with at least 10 KPI records, the five highest problem-rate suppliers each recorded a **100% problem rate**, meaning all of their recorded KPIs were rated below Good.
+
+- **Problem business areas:** **Passenger Services** and **DFTO** recorded the highest problem rates at **100%**, followed by **ABBSER at 76.9%**, **Community Investment & Funding Services at 63.6%**, and **Government Commercial Function at 56.0%**.
+
+- **Data quality:** Supplier names appeared in inconsistent formats across the source data. Standardising supplier names using trimming, case conversion, and title casing ensured that the same supplier was not incorrectly treated as multiple suppliers during analysis.
 
 ## 🛠️ SQL Techniques Used
 
