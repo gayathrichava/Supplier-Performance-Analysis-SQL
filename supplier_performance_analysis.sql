@@ -67,7 +67,7 @@ LIMIT 20;
 -- 5. PROBLEM SUPPLIERS
 -- =====================================================
 SELECT
-    supplier,
+    INITCAP(LOWER(TRIM(supplier))) AS supplier_clean,
     COUNT(*) AS total_kpis,
     COUNT(*) FILTER (
         WHERE rating <> 'Good'
@@ -79,7 +79,7 @@ SELECT
         1
     ) AS problem_rate_pct
 FROM supplier_kpi_raw
-GROUP BY supplier
+GROUP BY INITCAP(LOWER(TRIM(supplier)))
 HAVING COUNT(*) >= 10
 ORDER BY problem_rate_pct DESC, problem_kpis DESC
 LIMIT 20;
