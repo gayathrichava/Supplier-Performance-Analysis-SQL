@@ -142,10 +142,13 @@ The analysis showed that:
 
 ---
 
+
+
+
 ## ▶️ How to Run
 
-1. Load the quarterly datasets into PostgreSQL.
-2. Combine the quarterly data into a table named `supplier_kpi_raw`.
+1. Load the four cleaned quarterly CSV files from the `Clean Data` folder into PostgreSQL.
+2. Combine the quarterly datasets into a table named `supplier_kpi_raw`.
 3. Open `supplier_performance_analysis.sql` in pgAdmin 4.
 4. Run the queries section by section.
 5. Review the results for supplier, KPI, department, business-area, quarterly, trend, and data-quality analysis.
