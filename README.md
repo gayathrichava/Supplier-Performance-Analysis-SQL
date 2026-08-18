@@ -87,7 +87,6 @@ Applied supplier-name standardisation before performing supplier-level compariso
 
 One of the important findings was a data-quality issue involving supplier names.
 
-
 Supplier names appeared in multiple formats, particularly through differences in capitalisation and spacing. These variations can cause supplier records to be split across multiple groups during analysis.
 
 - `Accenture`
@@ -111,7 +110,6 @@ This made supplier-level grouping more consistent and helped identify cases wher
 
 ---
 
-
 ## 💡 Key Findings
 
 - **Overall performance:** 15,973 of 18,639 KPI records received a Good rating, resulting in an overall Good rate of **85.7%**.
@@ -122,7 +120,9 @@ This made supplier-level grouping more consistent and helped identify cases wher
 
 - **Problem business areas:** **Passenger Services** and **DFTO** recorded the highest problem rates at **100%**, followed by **ABBSER at 76.9%**, **Community Investment & Funding Services at 63.6%**, and **Government Commercial Function at 56.0%**.
 
-- **Data quality:** Supplier names appeared in inconsistent formats across the source data. Standardising supplier names using trimming, case conversion, and title casing ensured that the same supplier was not incorrectly treated as multiple suppliers during analysis.
+- **Data quality:** Supplier names appeared in inconsistent formats across the source data. Standardising supplier names using `TRIM()`, `LOWER()`, and `INITCAP()` made formatting more consistent and reduced the risk of treating formatting variations as separate supplier groups.
+
+---
 
 ## 🛠️ SQL Techniques Used
 
@@ -144,9 +144,6 @@ This made supplier-level grouping more consistent and helped identify cases wher
 
 ---
 
-
-
-
 ## ▶️ How to Run
 
 1. Load the four cleaned quarterly CSV files from the `Clean Data` folder into PostgreSQL.
@@ -156,6 +153,18 @@ This made supplier-level grouping more consistent and helped identify cases wher
 5. Review the results for supplier, KPI, department, business-area, quarterly, trend, and data-quality analysis.
 
 The SQL script assumes that the `supplier_kpi_raw` table has already been created and populated.
+
+---
+
+## 🗄️ Database Setup
+
+The quarterly cleaned CSV files were loaded into PostgreSQL and combined into a single analysis table named:
+
+`supplier_kpi_raw`
+
+The table contains the supplier KPI records used throughout the analysis.
+
+The SQL script assumes that the `supplier_kpi_raw` table has already been created and populated before the analysis queries are executed.
 
 ---
 
