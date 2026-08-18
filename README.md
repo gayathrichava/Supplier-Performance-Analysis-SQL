@@ -125,9 +125,9 @@ This made supplier-level grouping more consistent and helped identify cases wher
 - **Problem business areas:** **Passenger Services** and **DFTO** recorded the highest problem rates at **100%**, followed by **ABBSER at 76.9%**, **Community Investment & Funding Services at 63.6%**, and **Government Commercial Function at 56.0%**.
 
 
-- - **Data quality:** The data-quality check identified **136 supplier groups with multiple recorded name variations** after normalising whitespace and letter case. These inconsistencies could split supplier-level results across multiple name values. Supplier names were standardised using `TRIM()`, `LOWER()`, and `INITCAP()` for supplier-level analysis.
+- **Data quality:** The data-quality check identified **136 supplier groups with multiple recorded name variations** after normalising whitespace and letter case. These inconsistencies could split supplier-level results across multiple name values. Supplier names were standardised using `TRIM()`, `LOWER()`, and `INITCAP()` for supplier-level analysis.
 
-> **Problem KPI definition:** For this analysis, a "problem KPI" refers to any KPI record with a rating other than `Good`.
+**Problem KPI definition:** For this analysis, a "problem KPI" refers to any KPI record with a rating other than `Good`.
 > 
 
 ---
