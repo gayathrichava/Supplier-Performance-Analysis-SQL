@@ -89,6 +89,8 @@ One of the important findings was a data-quality issue involving supplier names.
 
 Supplier names appeared in multiple formats, particularly through differences in capitalisation and spacing. These variations can cause supplier records to be split across multiple groups during analysis.
 
+Examples included:
+
 - `Accenture`
 - `ACCENTURE`
 - `Accenture (UK) Limited`
@@ -106,6 +108,8 @@ SQL string functions were used to standardise supplier names by:
 
 A separate data-quality check was also used to identify supplier names that still appeared in multiple forms.
 
+The data-quality check identified **136 supplier groups with multiple recorded name variations** after normalising whitespace and letter case.
+
 This made supplier-level grouping more consistent and helped identify cases where the source data required further investigation.
 
 ---
@@ -120,7 +124,9 @@ This made supplier-level grouping more consistent and helped identify cases wher
 
 - **Problem business areas:** **Passenger Services** and **DFTO** recorded the highest problem rates at **100%**, followed by **ABBSER at 76.9%**, **Community Investment & Funding Services at 63.6%**, and **Government Commercial Function at 56.0%**.
 
-- **Data quality:** Supplier names appeared in inconsistent formats across the source data. Standardising supplier names using `TRIM()`, `LOWER()`, and `INITCAP()` made formatting more consistent and reduced the risk of treating formatting variations as separate supplier groups.
+- **Data quality:** The data-quality check identified **136 supplier groups with multiple recorded name variations** after normalising whitespace and letter case. These inconsistencies could split supplier-level results across multiple name values. Supplier names were standardised using `TRIM()`, `LOWER()`, and `INITCAP()` for supplier-level analysis.
+
+> **Problem KPI definition:** For this analysis, a "problem KPI" refers to any KPI record with a rating other than `Good`.
 
 ---
 
