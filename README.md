@@ -87,7 +87,8 @@ Applied supplier-name standardisation before performing supplier-level compariso
 
 One of the important findings was a data-quality issue involving supplier names.
 
-The same supplier could appear under different formats, for example:
+
+Supplier names appeared in multiple formats, particularly through differences in capitalisation and spacing. These variations can cause supplier records to be split across multiple groups during analysis.
 
 - `Accenture`
 - `ACCENTURE`
